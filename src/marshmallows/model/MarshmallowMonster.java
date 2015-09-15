@@ -23,7 +23,7 @@ public class MarshmallowMonster
 		this.monsterHair = monsterHair;
 		this.monsterBelly = monsterBelly;
 	}
-	
+	//Getters
 	public String getMonsterName()
 	{
 		return monsterName;
@@ -53,7 +53,7 @@ public class MarshmallowMonster
 	{
 		return monsterBelly;
 	}
-	
+	//Setters
 	public void setMonsterName(String monsterName)
 	{
 		this.monsterName = monsterName;
@@ -98,10 +98,10 @@ public class MarshmallowMonster
 		}
 		
 		String monsterInfo = "My monster has " + monsterEyes 
-							+ " eyes and its' name is " + monsterName 
-							+ " It has " + monsterArms + " arms and has " 
-							+ monsterLegs + " legs he is a a	little sparses but has " 
-							+ monsterHair + " hairds, does he have a belly? " + Gut;
+							+ " eyes and it's name is " + monsterName 
+							+ " he has " + monsterArms + " arms and has " 
+							+ monsterLegs + " legs he is a little sparses on hair but has " 
+							+ monsterHair + " hairs, does he have a belly? " + Gut;
 		
 		return monsterInfo;
 	}
