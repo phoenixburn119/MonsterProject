@@ -37,5 +37,24 @@ public class MonsterController
 		String newMonsterName = monsterScanner.next();
 		DrJohn.setMonsterName(newMonsterName);
 		
+		System.out.println("Give me a new number of eyes!");
+		int updatedEyes = monsterScanner.nextInt();
+		DrJohn.setMonsterEyes(updatedEyes);
+		
+		System.out.println("Give me a new number of arms!");
+		int updatedArms = monsterScanner.nextInt();
+		DrJohn.setMonsterArms(updatedArms);
+		
+		System.out.println("Give me a new number of legs!");
+		double updatedLegs = monsterScanner.nextDouble();
+		DrJohn.setMonsterLegs(updatedLegs);
+		
+		System.out.println("Give me more hair please!");
+		double updatedHair = monsterScanner.nextDouble();
+		DrJohn.setMonsterHair(updatedHair);
+		
+		System.out.println("Do I have a belly?!");
+		boolean updatedBelly = monsterScanner.nextBoolean();
+		DrJohn.setMonsterBelly(updatedBelly);
 	}
 }
