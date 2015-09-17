@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class MonsterController
 {
-	private MarshmallowMonster DrJohn;
+	private MarshmallowMonster DrJohn; //Declares a Monster called DrJohn.
+	private MarshmallowMonster userMonster;
 	private MonsterDisplay myDisplay;
 	private Scanner monsterScanner;
 	
@@ -27,8 +28,8 @@ public class MonsterController
 	public void start()
 	{
 		myDisplay.displayInfo(DrJohn.toString());
-		askQuestion();
-		myDisplay.displayInfo("Update monster info " + DrJohn.toString());
+		createUserMonster();
+		myDisplay.displayInfo("Update monster info " + userMonster.toString());
 	}
 	
 	private void askQuestion()
@@ -56,5 +57,36 @@ public class MonsterController
 		System.out.println("Do I have a belly?!");
 		boolean updatedBelly = monsterScanner.nextBoolean();
 		DrJohn.setMonsterBelly(updatedBelly);
+	}
+	
+	/**
+	 * Creates a MarshamllowMonster instance from user input.
+	 */
+	private void createUserMonster()
+	{
+		//Step one: Gather user information.
+		System.out.println("Lets make you a friend. What is your monsters name?");
+		String userName;
+		userName = monsterScanner.nextLine();
+		
+		System.out.println("Number of eyes on the monster?");
+		int userEyes = monsterScanner.nextInt();
+		
+		System.out.println("How many arms?");
+		int userArms = monsterScanner.nextInt();
+		
+		System.out.println("How many legs will it have? decimal please.");
+		double userLegs = monsterScanner.nextDouble();
+		
+		System.out.println("How much hair will it have? A decimal please.");
+		double userHair;
+		userHair = monsterScanner.nextDouble();
+		
+		System.out.print("Does it have a belly? - true or false");
+		boolean userBelly = monsterScanner.nextBoolean();
+		
+		//Step two: Build the monster using the constructor.
+		userMonster = new MarshmallowMonster(userName, userEyes, userArms, userLegs, userHair, userBelly);
+		
 	}
 }
