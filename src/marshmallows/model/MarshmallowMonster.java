@@ -53,6 +53,7 @@ public class MarshmallowMonster
 	{
 		return monsterBelly;
 	}
+	
 	//Setters
 	public void setMonsterName(String monsterName)
 	{

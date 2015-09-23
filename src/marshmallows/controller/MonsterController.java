@@ -28,7 +28,7 @@ public class MonsterController
 	public void start()
 	{
 		myDisplay.displayInfo(DrJohn.toString());
-		createUserMonster();
+		this.createUserMonster();
 		myDisplay.displayInfo("Update monster info " + userMonster.toString());
 	}
 	
