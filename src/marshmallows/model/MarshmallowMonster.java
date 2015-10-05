@@ -60,9 +60,9 @@ public class MarshmallowMonster
 		this.monsterName = monsterName;
 	}
 	
-	public void setMonsterEyes(int monsterEyes)
+	public void setMonsterEyes(int eyes)
 	{
-		this.monsterEyes = monsterEyes;
+		this.monsterEyes = eyes;
 	}
 	
 	public void setMonsterArms(int monsterArms)
@@ -98,11 +98,12 @@ public class MarshmallowMonster
 			Gut = "Nawww";
 		}
 		
-		String monsterInfo = "My monster has " + monsterEyes 
-							+ " eyes and it's name is " + monsterName 
-							+ " he has " + monsterArms + " arms and has " 
-							+ monsterLegs + " legs he is a little sparses on hair but has " 
-							+ monsterHair + " hairs, does he have a belly? " + Gut;
+		String monsterInfo =  " Name: " + monsterName 
+							+ " Eyes: " + monsterEyes 
+							+ " Arms: " + monsterArms 
+							+ " Legs: " + monsterLegs 
+							+ " Hairs: "+ monsterHair 
+							+ " Gut: " + Gut;
 		
 		return monsterInfo;
 	}

@@ -65,28 +65,52 @@ public class MonsterController
 	private void createUserMonster()
 	{
 		//Step one: Gather user information.
-		System.out.println("Lets make you a friend. What is your monsters name?");
-		String userName;
-		userName = monsterScanner.nextLine();
+		String  name = myDisplay.getAnswer("Lets make you a friend. What is your monsters name?");
+		myDisplay.displayResponse("You chose" + name);
+		DrJohn.setMonsterName(name);
 		
-		System.out.println("Number of eyes on the monster?");
-		int userEyes = monsterScanner.nextInt();
+		String eyes = myDisplay.getAnswer("How many Eyes?");
 		
-		System.out.println("How many arms?");
-		int userArms = monsterScanner.nextInt();
+		while(!isDouble(eyes));
+		{
+			eyes = myDisplay.getAnswer("Give it a valid number.");
+		}
 		
-		System.out.println("How many legs will it have? decimal please.");
-		double userLegs = monsterScanner.nextDouble();
+		if(isDouble(eyes))
+		{
+			age = Double.parseDouble(eyes);
+		}
 		
-		System.out.println("How much hair will it have? A decimal please.");
-		double userHair;
-		userHair = monsterScanner.nextDouble();
+		else
+		{
+			eyes = 2;
+		}
+		myDisplay.displayResponse("It has " + eyes + " eyes");
+		DrJohn.setMonsterEyes(eyes);
 		
-		System.out.print("Does it have a belly? - true or false");
-		boolean userBelly = monsterScanner.nextBoolean();
 		
-		//Step two: Build the monster using the constructor.
-		userMonster = new MarshmallowMonster(userName, userEyes, userArms, userLegs, userHair, userBelly);
 		
+		
+	}
+	
+	private boolean isInteger(String input)
+	{
+		boolean isInt = false;
+	}
+	
+	private boolean isDouble(String input)
+	{
+		boolean isDouble = false;
+		
+		try
+		{
+			double validDouble = Double.parseDouble(input);
+			isDouble = true;
+		}
+		catch(NumberFormatException error)
+		{
+			myDisplay.displayResponse("You did not type in a valid number.");
+		}
+		return isDouble;
 	}
 }

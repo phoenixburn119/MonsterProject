@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class MonsterDisplay
 {
 	
-	public String displayInfo(String input)
+	public String getAnswer(String input)
 	{
 		String answer = "";
 		
@@ -14,7 +14,7 @@ public class MonsterDisplay
 		return answer;
 	}
 	
-	public void diplayResponse(String input)
+	public void displayResponse(String input)
 	{
 		JOptionPane.showMessageDialog(null, input);
 	}
